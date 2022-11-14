@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>class07-JavaScript</title>
+    <meta name="robots" content="noindex">
+    <script async src="js/script01.js"></script>
+    <script defer src="js/script02.js"></script>
+  </head>
+  <body>
+    <script>
+      var classname = "JavaScript";
+      document.write(classname);
+    </script><br>
+
+    <script src="js/script02.js"></script>
+
+    <p>数値取得</p>
+    <form>
+      <label for="num">値 : <input type="text" id="num"></label>
+      <button id="button">Get</button>
+    </form>
+    <br>
+    <label>取得した値 : <input type="text" id="result"> </label>
+
+  </body>
+  <script>
+    var button = document.getElementById("button");
+
+    button.addEventListener("click", function(e){
+      e.preventDefault();
+
+      var textForm  = document.getElementById("num").value;
+
+      var resultForm = document.getElementById("result");
+      resultForm.value = textForm;
+    });
+
+  </script>
+</html>
